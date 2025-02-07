@@ -3,6 +3,6 @@ services:
   deep-research:
     build: .
     env_file:
-      - .env.local
+      - .env
     tty: true
     stdin_open: true
