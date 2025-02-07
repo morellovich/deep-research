@@ -4,5 +4,7 @@ services:
     build: .
     env_file:
       - .env
-    tty: true
-    stdin_open: true
+    ports:
+      - "69420:69420"
+    # tty: true
+    # stdin_open: true
