@@ -7,4 +7,11 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "start"]
+# Install ttyd and bash (if bash isn’t already installed)
+RUN apk update && apk upgrade && apk add bash && apk add nano
+
+RUN apk add --no-cache ttyd bash
+
+# Replace the default command with one that launches ttyd.
+# Here, we run bash so that ttyd exposes an interactive shell.
+CMD ["ttyd", "-p", "8080", "bash"]
