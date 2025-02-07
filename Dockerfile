@@ -14,4 +14,4 @@ RUN apk add --no-cache ttyd bash
 
 # Replace the default command with one that launches ttyd.
 # Here, we run bash so that ttyd exposes an interactive shell.
-CMD ["ttyd", "-p", "8080", "bash"]
+CMD ["ttyd", "-t", "-p", "8080", "bash"]
