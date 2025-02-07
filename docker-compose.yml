@@ -5,6 +5,6 @@ services:
     env_file:
       - .env
     ports:
-      - "69420:69420"
+      - "8080:8080"
     # tty: true
     # stdin_open: true
